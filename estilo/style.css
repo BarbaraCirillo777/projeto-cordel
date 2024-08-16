@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
+
+
+:root {
+    --fonte1: verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', cursive;
+    --fonte3: 'Sriracha', cursive;    
+      }  
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-size: 1em;    
+}
+
+html, body {
+    min-height: 100vh;
+    background-color: darkgray;
+    font-family:  var(--fonte1);
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;     
+}
+
+header > h1 {
+    padding-top: 50px;
+    font-variant: small-caps;/* Poderia ter usado uppercase no lugar de small-caps(aumenta apenas as primeiras letras, as letras ficam maiores.*/
+    font-family: var(--fonte2);
+    font-size: 10vw; /*viewport, quando a tela é menor a letra diminui e quando aumenta a tela a letra aumenta(não é a melhor maneira)*/ 
+}
+
+header > p {
+    padding-bottom: 50px;/*Pra fica igual a distancia do header (parte de cima) e a palava cordel moderno ficar centralizada no meio da caixa(50% pra cima  e 50% pra baixo)*/   
+
+}
+
+header a, footer a { /*configuração dos links do header do p e footer*/
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+header a:hover, footer a:hover { /*Quando passar o mouse em cima vai ficar sublinhado*/
+    text-decoration: underline;
+}
+
+section {/*configuração da section como um todo*/
+    padding-top: 10vh;/* Aqui vai dar efeito parallax entre elas*/
+    padding-bottom: 10vh;
+    line-height: 2em;/*Espaçamento duplo entre as linhas*/
+    padding-left: 30px;/* Afastar um pouco da lateral*/
+    font-family: var(--fonte3);
+    font-size: 3.5vw;/*viewport*/
+}
+
+section > p {
+    padding-bottom: 2em;/* Pra dar uma separada nos paragrafos que estavam juntos e foram colocados no mesmo encapsulamento*/
+}
+
+section.normal {
+    background-color: white;
+    color: black;
+}
+
+section.imagem {/*Toda essa cof. serve pras duas sessões de imagens*/
+    background-color: rgb(51, 51, 51);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.493) ;/*fez uma sombra pra dentro da caixa imagem*/
+    background-size: cover;/*trouxe a imagem mais centralizada*/
+    background-attachment: fixed;/*fixar imagem e quando rolar o texto a imagem está parada*/
+} 
+
+section.imagem > p { /*conf. do paragrafo da sessão*/
+    display: inline-block;/*trnsforma a caixa no tamanho do conteudo(as letras vão ficar certinhas)*/
+    padding: 5px;/*Pra não ficar colado*/
+    background-color: rgba(0, 0, 0.514);
+    text-shadow: 1px 1px 0px black;
+}
+
+section#img01 {/*Vai configurar a imagem que vai aparecer ao lado do texto desta sessão*/
+    background-image: url(../imagens/background001.jpg);//*Coloca..(esta dentro da pasta e quando colocar / já aparece a pasta com as opções de imagem*/
+    background-position: right center;/*Vai definir a posição da imagem ( lado direito ao centro)*/
+   
+}
+
+section#img02 {
+    background-image: url(../imagens/background002.jpg);
+  
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
